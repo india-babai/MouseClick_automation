@@ -1,0 +1,4 @@
+2026-07-11 03:59:04,072 INFO   step 1/3: wait for simulated download
+2026-07-11 03:59:06,594 INFO     found file: C:\Users\ARIJIT\AppData\Local\Temp\claude\D--DS-MouseClick-automation\7ec5faf3-d63c-475e-9354-f6017b0ef05e\scratchpad\filetest\downloads\report_CUST001.pdf
+2026-07-11 03:59:06,698 INFO   step 2/3: stage the file
+2026-07-11 03:59:06,809 INFO   step 3/3: check_file_exists

@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "id_column": "customer_id",
+    "default_timeout": 30,
+    "confidence": 0.85,
+    "action_delay": 0.4,
+    "max_retries": 1,
+    "on_error": "stop"
+  },
+
+  "_comment": "EXAMPLE flow for Aladdin -> report -> ART. Replace every anchors/*.png with screenshots you capture from YOUR screen using tools/capture_anchor.py. Any column in customers.csv can be used as a {placeholder} in text fields.",
+
+  "flow": [
+    { "action": "focus_window", "title_contains": "Aladdin",
+      "note": "bring Aladdin browser tab/window to front" },
+
+    { "action": "click_image", "image": "customer_search_box.png",
+      "note": "click the customer search field" },
+
+    { "action": "clear_field" },
+
+    { "action": "paste_text", "text": "{customer_id}", "press_enter": true,
+      "note": "search this customer" },
+
+    { "action": "wait_for_image", "image": "customer_loaded_marker.png",
+      "timeout": 60,
+      "note": "wait until the customer page has rendered" },
+
+    { "action": "click_image", "image": "generate_report_button.png" },
+
+    { "action": "wait_for_image_gone", "image": "generating_spinner.png",
+      "timeout": 300,
+      "note": "wait for report generation to finish (up to 5 min)" },
+
+    { "action": "click_image", "image": "download_report_button.png" },
+
+    { "action": "wait_for_image", "image": "download_complete_marker.png",
+      "timeout": 120 },
+
+    { "action": "focus_window", "title_contains": "ART",
+      "note": "switch to the ART system" },
+
+    { "action": "click_image", "image": "art_upload_button.png" },
+
+    { "action": "wait_for_image", "image": "file_dialog_filename_box.png",
+      "note": "Windows file-picker dialog is open" },
+
+    { "action": "paste_text",
+      "text": "C:\\Users\\YOURUSER\\Downloads\\report_{customer_id}.pdf",
+      "press_enter": true,
+      "note": "type full file path directly into the dialog - more reliable than browsing" },
+
+    { "action": "wait_for_image", "image": "art_upload_success.png",
+      "timeout": 120,
+      "note": "confirm ART accepted the file before moving on" }
+  ]
+}

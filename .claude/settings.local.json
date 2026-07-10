@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -m py_compile run.py autoflow\\\\actions.py autoflow\\\\runner.py tools\\\\capture_anchor.py tools\\\\mouse_position.py)",
+      "PowerShell(if \\($?\\) { \"syntax OK\" })"
+    ]
+  }
+}

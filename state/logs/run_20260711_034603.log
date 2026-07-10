@@ -1,0 +1,46 @@
+2026-07-11 03:46:03,106 INFO Total customers: 3 | already done: 0 | this run: 3
+2026-07-11 03:46:03,106 INFO DRY RUN - would process CUST001 with steps:
+2026-07-11 03:46:03,107 INFO     {'action': 'focus_window', 'title_contains': 'Aladdin', 'note': 'bring Aladdin browser tab/window to front'}
+2026-07-11 03:46:03,107 INFO     {'action': 'click_image', 'image': 'customer_search_box.png', 'note': 'click the customer search field'}
+2026-07-11 03:46:03,107 INFO     {'action': 'clear_field'}
+2026-07-11 03:46:03,108 INFO     {'action': 'paste_text', 'text': 'CUST001', 'press_enter': True, 'note': 'search this customer'}
+2026-07-11 03:46:03,108 INFO     {'action': 'wait_for_image', 'image': 'customer_loaded_marker.png', 'timeout': 60, 'note': 'wait until the customer page has rendered'}
+2026-07-11 03:46:03,109 INFO     {'action': 'click_image', 'image': 'generate_report_button.png'}
+2026-07-11 03:46:03,109 INFO     {'action': 'wait_for_image_gone', 'image': 'generating_spinner.png', 'timeout': 300, 'note': 'wait for report generation to finish (up to 5 min)'}
+2026-07-11 03:46:03,109 INFO     {'action': 'click_image', 'image': 'download_report_button.png'}
+2026-07-11 03:46:03,109 INFO     {'action': 'wait_for_image', 'image': 'download_complete_marker.png', 'timeout': 120}
+2026-07-11 03:46:03,109 INFO     {'action': 'focus_window', 'title_contains': 'ART', 'note': 'switch to the ART system'}
+2026-07-11 03:46:03,110 INFO     {'action': 'click_image', 'image': 'art_upload_button.png'}
+2026-07-11 03:46:03,110 INFO     {'action': 'wait_for_image', 'image': 'file_dialog_filename_box.png', 'note': 'Windows file-picker dialog is open'}
+2026-07-11 03:46:03,110 INFO     {'action': 'paste_text', 'text': 'C:\\Users\\YOURUSER\\Downloads\\report_CUST001.pdf', 'press_enter': True, 'note': 'type full file path directly into the dialog - more reliable than browsing'}
+2026-07-11 03:46:03,110 INFO     {'action': 'wait_for_image', 'image': 'art_upload_success.png', 'timeout': 120, 'note': 'confirm ART accepted the file before moving on'}
+2026-07-11 03:46:03,110 INFO DRY RUN - would process CUST002 with steps:
+2026-07-11 03:46:03,111 INFO     {'action': 'focus_window', 'title_contains': 'Aladdin', 'note': 'bring Aladdin browser tab/window to front'}
+2026-07-11 03:46:03,111 INFO     {'action': 'click_image', 'image': 'customer_search_box.png', 'note': 'click the customer search field'}
+2026-07-11 03:46:03,111 INFO     {'action': 'clear_field'}
+2026-07-11 03:46:03,111 INFO     {'action': 'paste_text', 'text': 'CUST002', 'press_enter': True, 'note': 'search this customer'}
+2026-07-11 03:46:03,111 INFO     {'action': 'wait_for_image', 'image': 'customer_loaded_marker.png', 'timeout': 60, 'note': 'wait until the customer page has rendered'}
+2026-07-11 03:46:03,111 INFO     {'action': 'click_image', 'image': 'generate_report_button.png'}
+2026-07-11 03:46:03,112 INFO     {'action': 'wait_for_image_gone', 'image': 'generating_spinner.png', 'timeout': 300, 'note': 'wait for report generation to finish (up to 5 min)'}
+2026-07-11 03:46:03,112 INFO     {'action': 'click_image', 'image': 'download_report_button.png'}
+2026-07-11 03:46:03,112 INFO     {'action': 'wait_for_image', 'image': 'download_complete_marker.png', 'timeout': 120}
+2026-07-11 03:46:03,112 INFO     {'action': 'focus_window', 'title_contains': 'ART', 'note': 'switch to the ART system'}
+2026-07-11 03:46:03,112 INFO     {'action': 'click_image', 'image': 'art_upload_button.png'}
+2026-07-11 03:46:03,112 INFO     {'action': 'wait_for_image', 'image': 'file_dialog_filename_box.png', 'note': 'Windows file-picker dialog is open'}
+2026-07-11 03:46:03,113 INFO     {'action': 'paste_text', 'text': 'C:\\Users\\YOURUSER\\Downloads\\report_CUST002.pdf', 'press_enter': True, 'note': 'type full file path directly into the dialog - more reliable than browsing'}
+2026-07-11 03:46:03,113 INFO     {'action': 'wait_for_image', 'image': 'art_upload_success.png', 'timeout': 120, 'note': 'confirm ART accepted the file before moving on'}
+2026-07-11 03:46:03,113 INFO DRY RUN - would process CUST003 with steps:
+2026-07-11 03:46:03,113 INFO     {'action': 'focus_window', 'title_contains': 'Aladdin', 'note': 'bring Aladdin browser tab/window to front'}
+2026-07-11 03:46:03,114 INFO     {'action': 'click_image', 'image': 'customer_search_box.png', 'note': 'click the customer search field'}
+2026-07-11 03:46:03,114 INFO     {'action': 'clear_field'}
+2026-07-11 03:46:03,114 INFO     {'action': 'paste_text', 'text': 'CUST003', 'press_enter': True, 'note': 'search this customer'}
+2026-07-11 03:46:03,114 INFO     {'action': 'wait_for_image', 'image': 'customer_loaded_marker.png', 'timeout': 60, 'note': 'wait until the customer page has rendered'}
+2026-07-11 03:46:03,115 INFO     {'action': 'click_image', 'image': 'generate_report_button.png'}
+2026-07-11 03:46:03,115 INFO     {'action': 'wait_for_image_gone', 'image': 'generating_spinner.png', 'timeout': 300, 'note': 'wait for report generation to finish (up to 5 min)'}
+2026-07-11 03:46:03,115 INFO     {'action': 'click_image', 'image': 'download_report_button.png'}
+2026-07-11 03:46:03,115 INFO     {'action': 'wait_for_image', 'image': 'download_complete_marker.png', 'timeout': 120}
+2026-07-11 03:46:03,115 INFO     {'action': 'focus_window', 'title_contains': 'ART', 'note': 'switch to the ART system'}
+2026-07-11 03:46:03,115 INFO     {'action': 'click_image', 'image': 'art_upload_button.png'}
+2026-07-11 03:46:03,116 INFO     {'action': 'wait_for_image', 'image': 'file_dialog_filename_box.png', 'note': 'Windows file-picker dialog is open'}
+2026-07-11 03:46:03,116 INFO     {'action': 'paste_text', 'text': 'C:\\Users\\YOURUSER\\Downloads\\report_CUST003.pdf', 'press_enter': True, 'note': 'type full file path directly into the dialog - more reliable than browsing'}
+2026-07-11 03:46:03,116 INFO     {'action': 'wait_for_image', 'image': 'art_upload_success.png', 'timeout': 120, 'note': 'confirm ART accepted the file before moving on'}
