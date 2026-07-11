@@ -25,6 +25,17 @@ except Exception:
 pyautogui.FAILSAFE = True   # slam mouse to top-left corner to abort
 pyautogui.PAUSE = 0.3       # small breath after every pyautogui call
 
+# Confidence-based matching (tolerant of small rendering differences)
+# requires OpenCV. Fail loudly at startup rather than mid-run.
+try:
+    import cv2  # noqa: F401
+except ImportError:
+    raise SystemExit(
+        "opencv-python is not installed in THIS Python environment - "
+        "image matching cannot work reliably without it.\n"
+        "Fix:  python -m pip install opencv-python"
+    )
+
 ANCHOR_DIR = Path(__file__).resolve().parent.parent / "anchors"
 
 

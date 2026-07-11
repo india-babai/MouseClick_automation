@@ -4,19 +4,28 @@
     "default_timeout": 30,
     "confidence": 0.85,
     "action_delay": 0.4,
-    "max_retries": 1,
+    "max_retries": 0,
     "on_error": "stop"
   },
 
   "_comment": "EXAMPLE flow for Aladdin -> report -> ART. Replace every anchors/*.png with screenshots you capture from YOUR screen using tools/capture_anchor.py. Any column in customers.csv can be used as a {placeholder} in text fields.",
 
   "flow": [
-    { "action": "focus_window", "title_contains": "Aladdin",
-      "note": "bring Aladdin browser tab/window to front" },
+{ "action": "focus_window", "title_contains": "Google Chrome",
+  "note": "bring Chrome to front" },
 
-    { "action": "click_image", "image": "customer_search_box.png",
-      "note": "click the customer search field" },
+{ "action": "hotkey", "keys": ["ctrl", "t"],
+  "note": "open a new tab (same as clicking the + symbol)" },
 
+{ "action": "click_image", "image": "gmail_link.png",
+  "timeout": 60, "confidence": 0.92,
+  "note": "click the Gmail link on the new tab page" },
+
+{ "action": "wait_for_image", "image": "gmail_loaded_marker.png",
+  "timeout": 60, "note": "Gmail loaded finding" },
+{ "action": "wait_for_image", "image": "page_loaded_marker.png",
+  "timeout": 60,
+  "note": "wait until the page has actually rendered" },
     { "action": "clear_field" },
 
     { "action": "paste_text", "text": "{customer_id}", "press_enter": true,
