@@ -33,10 +33,16 @@ pip install -r requirements.txt
 
 1. Open Aladdin and ART, do the flow manually once, and note every
    click/keystroke.
-2. Capture an anchor image for each button/marker you interact with:
+2. Capture anchor images for every button/marker you interact with —
+   one session captures them sequentially:
    ```
-   python tools/capture_anchor.py generate_report_button
+   python tools/capture_anchor.py
    ```
+   For each anchor you get 5 seconds to hover the mouse over the
+   element's top-left corner, then 5 seconds for the bottom-right.
+   The tool then asks for a name: type one to save it as
+   `anchors/<name>.png` and move to the next capture, type `retry`
+   to discard and redo the capture, or `quit` when you're done.
 3. Edit `config.json` to describe your flow (the shipped one is a
    realistic example — replace it with your real steps and anchors).
 4. Validate without touching the mouse:
